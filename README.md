@@ -20,29 +20,39 @@ swift package combobox swift封装下拉框
 
 ### Copy the Combobox folder to your project
   
-## API指南(例如:)
+## 例子:
 
+    ///创建
+    self.combobox1 = Combobox(frame: self.comboboxFrame)
+    
+    ///添加列表数据
+    self.combobox1?.listArray = ["选项1","选项2","选项3","选项4","选项5"]
 
+    ///添加下拉框占位符
+    self.combobox1?.placeholder = "请选择"
 
-self.combobox1 = Combobox(frame: self.comboboxFrame)
-==>创建
-   
+    ///下拉框样式
+    self.combobox2?.comboboxStyle = .RoundCorner
+     
+    ///添加下拉框背景色（选择背景色）
+    self.combobox1?.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.5)
 
-self.combobox1?.listArray = ["选项1","选项2","选项3","选项4","选项5"]
-==>添加列表数据
-   
+    ///添加下拉框代理
+    self.combobox1?.delegate = self
 
-self.combobox1?.placeholder = "请选择"
-==>添加下拉框占位符
-   
+    ///将下拉框添加到view
+    self.view.addSubview(combobox1!) 
 
-self.combobox1?.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.5)
-==>添加下拉框背景色（选择背景色）
-   
+## 代理方法:
 
-self.combobox1?.delegate = self
-==>添加下拉框代理
-   
-
-self.view.addSubview(combobox1!) 
-==>将下拉框添加到view
+    ///下拉列表单项被选择
+    /// - parameter combobox: 当前下拉框
+    /// - parameter index: 当前选项下标索引
+    /// - parameter Void
+    func selectComboboxListItem(combobox:Combobox,index:Int)
+    
+    ///点击了下拉框 可选方法，用于处理界面其他需要还原的控件
+    /// - parameter combobox: 当前下拉框
+    /// - parameter dropDowm: true代表处于下拉，false代表没有下拉
+    /// - parameter Void
+    func clickCombobox(combobox:Combobox,dropDowm:Bool)
