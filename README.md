@@ -22,20 +22,20 @@ swift package combobox swift封装下拉框
   
 ## API指南(例如:)
 
-   ///创建\n
-   self.combobox1 = Combobox(frame: self.comboboxFrame)
+///创建
+self.combobox1 = Combobox(frame: self.comboboxFrame)
    
-   ///添加列表数据\n
-   self.combobox1?.listArray = ["选项1","选项2","选项3","选项4","选项5"]
+///添加列表数据
+self.combobox1?.listArray = ["选项1","选项2","选项3","选项4","选项5"]
    
-   ///添加下拉框占位符\n
-   self.combobox1?.placeholder = "请选择"
+///添加下拉框占位符
+self.combobox1?.placeholder = "请选择"
    
-   ///添加下拉框背景色（选择背景色）\n
-   self.combobox1?.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.5)
+///添加下拉框背景色（选择背景色）
+self.combobox1?.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.5)
    
-   ///添加下拉框代理\n
-   self.combobox1?.delegate = self
+///添加下拉框代理
+self.combobox1?.delegate = self
    
-   ///将下拉框添加到view\n
-   self.view.addSubview(combobox1!)  
+///将下拉框添加到view
+self.view.addSubview(combobox1!)  
